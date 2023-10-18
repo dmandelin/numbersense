@@ -1,6 +1,7 @@
+let dotsFramesValue = 3;
 const preBlankFrames = () => Math.floor(randNorm(60, 6));
 const postBlankFrames = preBlankFrames;
-const dotsFrames = () => 3;
+const dotsFrames = () => dotsFramesValue;
 const W = document.querySelector('canvas').width;
 const H = document.querySelector('canvas').height;
 function sum(ns) {
@@ -217,6 +218,9 @@ class App {
             this.setState(this.state.onTouchStart(event));
         });
         this.buildScorePanel();
+        this.updateTimePanel();
+        qs('#shorter').addEventListener('click', () => this.bumpBlinkFrames(-1));
+        qs('#longer').addEventListener('click', () => this.bumpBlinkFrames(1));
     }
     buildScorePanel() {
         const relSpace = 0.5;
@@ -242,6 +246,17 @@ class App {
         }
         this.totalScoreRow = buildScoreRow('*');
     }
+    updateTimePanel() {
+        const dt = 1000 / (60 / dotsFramesValue);
+        qs('#time-data').innerHTML = `${Math.round(dt)} ms`;
+    }
+    bumpBlinkFrames(incr) {
+        const newBlinkFrames = dotsFramesValue + incr;
+        if (newBlinkFrames > 0) {
+            dotsFramesValue = newBlinkFrames;
+            this.updateTimePanel();
+        }
+    }
     start() {
         this.state.onEnter();
     }
@@ -262,7 +277,7 @@ class App {
         }
     }
     drawDots(dots) {
-        this.ctx.fillStyle = '#222';
+        this.ctx.fillStyle = 'black';
         for (const d of dots) {
             this.ctx.beginPath();
             this.ctx.arc(d.x, d.y, Dot.radius, 0, 2 * Math.PI);
