@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Sense</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Number Sense</h1>
+    <div class="main-row">
+        <div id="score-panel" class="hidden">
+            <div id="score-data-correct" class="pcolor"></div>
+            <div class="pcolor small mgb">correct</div>
+            <div class="scolor small">out of</div>
+            <div id="score-data-tried" class="scolor"></div>
+        </div>
+
+        <canvas width='320' height='320'></canvas>
+
+        <div id="item-panel" class="hidden">
+            <div class="pcolor mgbs">Guess</div>
+            <div id="item-data-guess" class="pcolor big mgb"></div>
+            <div class="scolor mgbs">Actual</div>
+            <div id="item-data-actual" class="scolor big"></div>
+        </div>
+    </div>
+
+    <div id="instruction-panel"></div>
+
+    <script src="numbersense.js"></script>
+</body>
+</html>

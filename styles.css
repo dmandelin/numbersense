@@ -1,0 +1,81 @@
+:root {
+    --pcolor: #800000;
+    --scolor: #001966;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+body {
+    font-family: "Russo One", "Open Sans", sans-serif;
+    margin: 0;
+
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.main-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+#score-panel, #item-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.big {
+    font-size: 1.5rem;
+}
+
+.mgb {
+    margin-bottom: 1rem;
+}
+
+.mgbs {
+    margin-bottom: 0.25rem;
+}
+
+.pcolor {
+    color: var(--pcolor);
+}
+
+.scolor {
+    color: var(--scolor);
+}
+
+canvas {
+    display: block;
+    border: 3px solid #555;
+}
+
+.info-panel-label, .info-panel-data {
+    text-align: center;
+}
+
+.info-panel-label {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.info-panel-data {
+    margin-bottom: 2rem;
+}
+
+#instruction-panel {
+    color: var(--scolor);
+    text-align: center;
+    margin-top: 1rem;
+}
