@@ -116,6 +116,7 @@ h1 {
 
 .score-number {
     text-align: center;
+    width: 1rem;
 }
 
 .score-bar-backing {
