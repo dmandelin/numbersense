@@ -7,31 +7,6 @@
     visibility: hidden;
 }
 
-body {
-    font-family: "Russo One", "Open Sans", sans-serif;
-    margin: 0;
-
-    padding: 0;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-.main-row {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-}
-
-#score-panel, #item-panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .small {
     font-size: 0.8rem;
 }
@@ -54,6 +29,74 @@ h1 {
 
 .scolor {
     color: var(--scolor);
+}
+
+body {
+    font-family: "Russo One", "Open Sans", sans-serif;
+    margin: 0;
+
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.main-row {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+#score-panel {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#item-panel {
+    display: flex;
+    width: 150px;
+}
+
+#item-panel-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-panel-spacer {
+    flex: 1 0 auto;
+}
+
+.score-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+}
+
+.score-number {
+    text-align: center;
+}
+
+.score-bar-backing {
+    border: 0.75px solid #555;
+}
+
+.score-bar {
+    background-color: var(--scolor);
+}
+
+.score-text {
+    font-size: 0.8rem;
+    width: 2.5rem;
+    text-align: right;
 }
 
 canvas {

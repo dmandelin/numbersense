@@ -15,19 +15,18 @@
     <h1>Number Sense</h1>
     <div class="main-row">
         <div id="score-panel" class="hidden">
-            <div id="score-data-correct" class="pcolor"></div>
-            <div class="pcolor small mgb">correct</div>
-            <div class="scolor small">out of</div>
-            <div id="score-data-tried" class="scolor"></div>
         </div>
 
         <canvas width='320' height='320'></canvas>
 
         <div id="item-panel" class="hidden">
-            <div class="pcolor mgbs">Guess</div>
-            <div id="item-data-guess" class="pcolor big mgb"></div>
-            <div class="scolor mgbs">Actual</div>
-            <div id="item-data-actual" class="scolor big"></div>
+            <div id="item-panel-inner">
+                <div class="pcolor mgbs">Guess</div>
+                <div id="item-data-guess" class="pcolor big mgb"></div>
+                <div class="scolor mgbs">Actual</div>
+                <div id="item-data-actual" class="scolor big"></div>
+            </div>
+            <div id="item-panel-spacer"></div>
         </div>
     </div>
 
