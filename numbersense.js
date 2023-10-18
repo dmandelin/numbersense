@@ -27,7 +27,7 @@ function randNorm(μ, σ) {
 class Dot {
     x;
     y;
-    static radius = 5;
+    static radius = 10;
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -35,7 +35,7 @@ class Dot {
     overlaps(othr) {
         const dx = this.x - othr.x;
         const dy = this.y - othr.y;
-        return dx * dx + dy * dy <= 4 * Dot.radius * Dot.radius;
+        return dx * dx + dy * dy <= 16 * Dot.radius * Dot.radius;
     }
     static generate() {
         const margin = 0.2;
@@ -56,7 +56,9 @@ class Dot {
                     break;
                 }
             }
-            dots.push(dot);
+            if (ok) {
+                dots.push(dot);
+            }
         }
         return dots;
     }

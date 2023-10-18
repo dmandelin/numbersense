@@ -29,14 +29,14 @@ function randNorm(μ: number, σ: number): number {
 }
 
 class Dot {
-    static readonly radius = 5;
+    static readonly radius = 10;
 
     constructor(public readonly x: number, public readonly y: number) {}
 
     overlaps(othr: Dot) {
         const dx = this.x - othr.x;
         const dy = this.y - othr.y;
-        return dx * dx + dy * dy <= 4 * Dot.radius * Dot.radius;
+        return dx * dx + dy * dy <= 16 * Dot.radius * Dot.radius;
     }
 
     static generate(): Dot[] {
@@ -59,7 +59,9 @@ class Dot {
                     break;
                 }
             }
-            dots.push(dot);
+            if (ok) {
+                dots.push(dot);
+            }
         }
         return dots;
     }
